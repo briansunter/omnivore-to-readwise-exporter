@@ -1,0 +1,28 @@
+{
+  "name": "omnivore-export",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild export.ts --bundle --platform=node --outfile=dist/export.js",
+    "start": "npm run build && node dist/export.js",
+    "dry-run": "npm run build && node dist/export.js --dry-run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cli-progress": "^3.12.0",
+    "csv-parse": "^5.5.6",
+    "csv-stringify": "^6.5.1",
+    "dotenv": "^16.4.5",
+    "graphql-request": "^7.1.0",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.4",
+    "esbuild": "^0.20.1"
+  }
+}
